@@ -9,8 +9,8 @@ spec:
     app: ping-prueba
   ports:
     - protocol: TCP
-      port: 30300
-      targetPort: 30300
+      port: 20400
+      targetPort: 20400
   type: LoadBalancer
 
 
