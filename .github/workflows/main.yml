@@ -34,7 +34,7 @@ jobs:
       - name: Preparamos y Generamos la Imagen y la enviamos al ECR
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORY_URI }}
+          ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORI_URI }}
           IMAGE_TAG: latest
         run: |
         
