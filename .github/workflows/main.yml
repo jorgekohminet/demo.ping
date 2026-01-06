@@ -6,6 +6,8 @@ on:
     branches:
       - main
 
+
+## definimos los jobs
 jobs:
   build-and-push:
     runs-on: ubuntu-latest
