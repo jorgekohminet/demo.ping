@@ -27,7 +27,7 @@ jobs:
 
       ## Ingresamos al ECR
       - name: Ingresamos al ECR
-        id: login-ecr
+        id: login-ecre
         uses: aws-actions/amazon-ecr-login@v2
 
       ## Preparamos y Generamos la Imagen y la enviamos al ECR
@@ -39,11 +39,11 @@ jobs:
         run: |
         
           # Construimos el contenedor y lo tageamos en el reposditorio correspondiente
-          echo "Construimos y tagearmos (-t) el contenedor con 'docker build -t ${{ ECR_REPOSITORY }}:${{ IMAGE_TAG }} .'"
+          echo "Construimos y tagearmos (-t) el contenedor con 'docker build -t ${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }} .'"
           docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
 
           # Push the image to ECR
-          echo "Enviamos al repositorio el contenedor con 'docker push ${{ ECR_REPOSITORY }}:${{ IMAGE_TAG }}'"
+          echo "Enviamos al repositorio el contenedor con 'docker push ${{ env.ECR_REPOSITORY }}:${{ env.IMAGE_TAG }}'"
           docker push $ECR_REPOSITORY:$IMAGE_TAG
 
       - name: Instalar el YQ para poder actualizar el Manifiesto
