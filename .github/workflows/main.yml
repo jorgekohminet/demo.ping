@@ -55,6 +55,7 @@ jobs:
           ## Actualizamos el Tag en el deployment usando el yq
           yq -i '.spec.template.spec.containers[0].image = "ping-demo:'"${GITHUB_ENV: -7}"'"' ./k8s/k8s-deployment.yaml
 
+       ##
        ## Aplicamos Commit y Push
        ## Para el caso del Push vamos a requerir un permiso especial, para otorgarlo hacemos lo siguiente
        ## Desde el manel principal del proyecto seleccionamos Settings --> Actions (lado izquiero) --> General -->
@@ -67,3 +68,4 @@ jobs:
           git add k8s/k8s-deployment.yaml
           git commit -m 'Actualización automática'
           git push origin main
+          
