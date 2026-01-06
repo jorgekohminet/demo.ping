@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: ping-demo-app
-          image: ping-demo:a81b70d
+          image: ping-demo:977b3f5
           ports:
             - containerPort: 20400
