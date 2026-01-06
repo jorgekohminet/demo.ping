@@ -37,8 +37,9 @@ jobs:
           ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORI_URI }}
           IMAGE_TAG: latest
         run: |
+          echo "Procesando proyecto demo.ping de demostración"
         
-          # Build the Docker image
+          # Construimos el contenedor y lo tageamos en el reposditorio correspondiente
           docker build -t $ECR_REPOSITORY:$IMAGE_TAG .
 
           # Push the image to ECR
