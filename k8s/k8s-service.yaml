@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: ping-prueba-service
+  name: ping-demo-service
   labels:
-    app: ping-prueba
+    app: ping-demo
 spec:
   selector:
-    app: ping-prueba
+    app: ping-demo
   ports:
     - protocol: TCP
       port: 20400
