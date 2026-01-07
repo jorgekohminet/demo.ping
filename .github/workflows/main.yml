@@ -69,7 +69,7 @@ jobs:
 
       - name: crear archivo de confirmación y versión para que existan cambios a aplicar y no genere error
         run: |
-          echo "Variables Generadas {{ $GITHUB_ENV }}" > confirm.ver
+          echo "Variables Generadas {{ $GITHUB_ENV }}" >> confirm.ver
           git add confirm.ver
 
        ##
