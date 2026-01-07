@@ -35,7 +35,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ## ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORI_URI }}
-          ECR_REPOSITORY: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping"
+          ECR_REPOSITORY: "public.ecr.aws/z4u0p9o7/argocd/demopingpub"
           IMAGE_TAG: latest
         run: |
         
