@@ -23,7 +23,8 @@ public class StartController {
         java.util.Date fechaPing = new java.util.Date();
         String retorno = null;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        retorno = "Ping recibido el dia u hora: " + sdf.format(fechaPing);
+        retorno = "Ping recibido el dia u hora: " + sdf.format(fechaPing) + "\n" +
+                "Información agregada para probar la canalización CD+CI";
         return retorno;
     }
 
