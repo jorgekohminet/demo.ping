@@ -16,8 +16,8 @@ spec:
         app: ping-demo
     spec:
       containers:
-        - name: "demoping"
-          image: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping"
+        - name: "ping-demo"
+          image: "116933114869.dkr.ecr.us-east-1.amazonaws.com/ping-demo"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80

@@ -19,9 +19,3 @@ spec:
       nodePort: 32400
       targetPort: 32400
   type: NodePort
-  env:
-    - name: identificador
-      value: /home/runner/work/_temp/_runner_file_commands/set_env_e66b7a24-af31-4206-a9e7-9c4462416c9d
-
-
-
