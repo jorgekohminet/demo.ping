@@ -11,7 +11,7 @@ spec:
     - protocol: TCP
       port: 20400
       targetPort: 20400
-  type: LoadBalancer
+  type: NodePort
 
 
 
