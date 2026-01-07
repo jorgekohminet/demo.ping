@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: "demoping"
-          image: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping"
+          image: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping:85412000214"
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 80
