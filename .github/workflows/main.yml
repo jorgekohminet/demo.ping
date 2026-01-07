@@ -68,7 +68,7 @@ jobs:
           ## yq -i '.spec.template.spec.containers[0].name = "demoping"' ./k8s/k8s-deployment.yaml
 
       - name: crear archivo de confirmación y versión para que existan cambios a aplicar y no genere error
-        run: echo "$GITHUB_ENV" > confirm.ver
+        run: echo "Variables Generadas {{ $GITHUB_ENV }}" > confirm
 
        ##
        ## Aplicamos Commit y Push
