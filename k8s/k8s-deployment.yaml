@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: demoping
-          image: 116933114869.dkr.ecr.us-east-1.amazonaws.com
+          image: ping-demo:4d64221
           ports:
             - containerPort: 20400
