@@ -9,8 +9,8 @@ spec:
     app: ping-demo
   ports:
     - protocol: TCP
-      port: 20400
-      targetPort: 20400
+      port: 30400
+      targetPort: 30400
   type: NodePort
 
 
