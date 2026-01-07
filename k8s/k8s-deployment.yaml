@@ -15,7 +15,7 @@ spec:
         app: ping-demo
     spec:
       containers:
-        - name: ping-demo-app
-          image: ping-demo:9dac78d
+        - name: demoping
+          image: 116933114869.dkr.ecr.us-east-1.amazonaws.com
           ports:
             - containerPort: 20400
