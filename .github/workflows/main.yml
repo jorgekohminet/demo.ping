@@ -70,7 +70,7 @@ jobs:
       - name: crear archivo de confirmación y versión para que existan cambios a aplicar y no genere error
         run: |
           echo "Variables Generadas {{ $GITHUB_ENV }}" >> k8s/confirm.ver
-          git add confirm.ver
+          git add k8s/confirm.ver
 
        ##
        ## Aplicamos Commit y Push
