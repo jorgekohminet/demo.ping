@@ -37,6 +37,10 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Definimos el puerto por el cual se expondra la aplicación dentro del contenedor
+## EXPOSE en un Dockerfile es una instrucción que documenta los puertos en los que la aplicación dentro del contenedor escuchará, 
+## pero no publica ni abre esos puertos al exterior por sí sola; sirve como información para Docker y desarrolladores, indicando
+## qué puertos son necesarios, y se complementa con el comando -p (publish) al ejecutar el contenedor para hacerlos accesibles desde el host. 
+## Es una especie de "nota" para el motor de Docker y los usuarios sobre la red interna, no una directiva de acceso. 
 EXPOSE 30400
 
 # Define the command to run your application when the container starts
