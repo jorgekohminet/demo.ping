@@ -35,8 +35,10 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           ## ECR_REPOSITORY: ${{ secrets.ECR_REPOSITORI_URI }}
-          ECR_REPOSITORY: "public.ecr.aws/z4u0p9o7/argocd/demopingpub"
+          ## ECR_REPOSITORY: "public.ecr.aws/z4u0p9o7/argocd/demopingpub"
+          ECR_REPOSITORY: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping"
           IMAGE_TAG: latest
+          
         run: |
         
           # Construimos el contenedor y lo tageamos en el reposditorio correspondiente
@@ -62,8 +64,8 @@ jobs:
 
           ## Colocamos la URI del repositorio de ECR
           ## yq -i '.spec.template.spec.containers[0].image = "116933114869.dkr.ecr.us-east-1.amazonaws.com"' ./k8s/k8s-deployment.yaml
-          yq -i '.spec.template.spec.containers[0].image = "public.ecr.aws/z4u0p9o7/argocd/demopingpub"' ./k8s/k8s-deployment.yaml
-          yq -i '.spec.template.spec.containers[0].name = "demopingpub"' ./k8s/k8s-deployment.yaml
+          ## yq -i '.spec.template.spec.containers[0].image = "public.ecr.aws/z4u0p9o7/argocd/demopingpub"' ./k8s/k8s-deployment.yaml
+          ## yq -i '.spec.template.spec.containers[0].name = "demoping"' ./k8s/k8s-deployment.yaml
 
        ##
        ## Aplicamos Commit y Push
