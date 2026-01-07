@@ -25,7 +25,7 @@ public class StartController {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         retorno = "Ping recibido el dia u hora: " + sdf.format(fechaPing) + "\n" +
                 "Información agregada para probar la canalización CD+CI" + "\n" +
-                "Favor de confirmar el cambio";
+                "Favor de confirmar el cambio - texto agregado";
         return retorno;
     }
 
