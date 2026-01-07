@@ -61,8 +61,9 @@ jobs:
           ## yq -i '.spec.template.spec.containers[0].image = "ping-demo:'"${GITHUB_ENV: -7}"'"' ./k8s/k8s-deployment.yaml
 
           ## Colocamos la URI del repositorio de ECR
-          yq -i '.spec.template.spec.containers[0].image = "116933114869.dkr.ecr.us-east-1.amazonaws.com"' ./k8s/k8s-deployment.yaml
-          yq -i '.spec.template.spec.containers[0].name = "demoping"' ./k8s/k8s-deployment.yaml
+          ## yq -i '.spec.template.spec.containers[0].image = "116933114869.dkr.ecr.us-east-1.amazonaws.com"' ./k8s/k8s-deployment.yaml
+          yq -i '.spec.template.spec.containers[0].image = "public.ecr.aws/z4u0p9o7/argocd/demopingpub"' ./k8s/k8s-deployment.yaml
+          yq -i '.spec.template.spec.containers[0].name = "demopingpub"' ./k8s/k8s-deployment.yaml
 
        ##
        ## Aplicamos Commit y Push
