@@ -16,14 +16,9 @@ spec:
         app: ping-demo
     spec:
       containers:
-<<<<<<< Updated upstream
         - name: "demoping"
           image: "116933114869.dkr.ecr.us-east-1.amazonaws.com/demoping"
           imagePullPolicy: IfNotPresent
-=======
-        - name: ping-demo-app
-          image: 116933114869.dkr.ecr.us-east-1.amazonaws.com
->>>>>>> Stashed changes
           ports:
             - containerPort: 80
               protocol: TCP
