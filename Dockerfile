@@ -37,7 +37,7 @@ WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
 
 # Definimos el puerto por el cual se expondra la aplicación dentro del contenedor
-EXPOSE 30300
+EXPOSE 30400
 
 # Define the command to run your application when the container starts
 ENTRYPOINT ["java", "-jar", "app.jar"]
