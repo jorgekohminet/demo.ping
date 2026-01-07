@@ -68,7 +68,9 @@ jobs:
           ## yq -i '.spec.template.spec.containers[0].name = "demoping"' ./k8s/k8s-deployment.yaml
 
       - name: crear archivo de confirmación y versión para que existan cambios a aplicar y no genere error
-        run: echo "Variables Generadas {{ $GITHUB_ENV }}" > confirm
+        run: |
+          echo "Variables Generadas {{ $GITHUB_ENV }}" > confirm.ver
+          git add confirm.ver
 
        ##
        ## Aplicamos Commit y Push
@@ -81,6 +83,6 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions@noreply"
           git add k8s/k8s-deployment.yaml
-          git commit -m 'Actualización automática'
+          git commit -m 'Actualización automática :: {{ $GITHUB_ENV }}'
           git push origin main
           
